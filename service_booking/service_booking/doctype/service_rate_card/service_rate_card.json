@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-03 20:35:42.842666",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "service_type",
+  "rate_type",
+  "column_break_hvgv",
+  "airport",
+  "vehicle_class",
+  "column_break_mdtn",
+  "allow_round_trip",
+  "disabled",
+  "description",
+  "section_break_jeuu",
+  "column_break_nxjg",
+  "rate",
+  "addon_amount",
+  "column_break_lset",
+  "minimum_hours",
+  "maximum_hours",
+  "column_break_vcpx",
+  "currency",
+  "amount",
+  "section_break_uejz",
+  "addons",
+  "section_break_uxhs",
+  "inclusions"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Type",
+   "options": "Service Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hvgv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport"
+  },
+  {
+   "fieldname": "vehicle_class",
+   "fieldtype": "Link",
+   "label": "Vehicle Class",
+   "options": "Vehicle Class"
+  },
+  {
+   "fieldname": "section_break_jeuu",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "column_break_nxjg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "column_break_vcpx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rate_type",
+   "fieldtype": "Link",
+   "label": "Rate Type",
+   "options": "Service Rate Type"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "addon_amount",
+   "fieldtype": "Currency",
+   "label": "Addon Amount"
+  },
+  {
+   "fieldname": "column_break_mdtn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lset",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "minimum_hours",
+   "fieldtype": "Float",
+   "label": "Minimum Hours"
+  },
+  {
+   "fieldname": "maximum_hours",
+   "fieldtype": "Float",
+   "label": "Maximum Hours"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uxhs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "inclusions",
+   "fieldtype": "Table",
+   "label": "Inclusions",
+   "options": "Service Feature"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_round_trip",
+   "fieldtype": "Check",
+   "label": "Allow Round Trip"
+  },
+  {
+   "fieldname": "section_break_uejz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "addons",
+   "fieldtype": "Table",
+   "label": "Addons",
+   "options": "Service Rate Addon"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-04 11:42:43.658345",
+ "modified_by": "Administrator",
+ "module": "Service Booking",
+ "name": "Service Rate Card",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

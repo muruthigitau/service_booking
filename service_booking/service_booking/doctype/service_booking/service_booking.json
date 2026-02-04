@@ -1,0 +1,249 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-03 20:04:16.281148",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "service_type",
+  "customer",
+  "paid",
+  "column_break_xopg",
+  "date",
+  "booking_status",
+  "vehicle_selection_section",
+  "vehicle_class",
+  "column_break_ukzw",
+  "vehicle",
+  "column_break_bhok",
+  "driver",
+  "rental_details_section",
+  "rental_details",
+  "airport_transfer_details_section",
+  "airport_transfer",
+  "event_transport_details_section",
+  "event_transport",
+  "pricing_summary_section",
+  "rate_card",
+  "base_amount",
+  "column_break_uxbq",
+  "add_ons_amount",
+  "round_trip",
+  "column_break_kkiw",
+  "currency",
+  "total_amount",
+  "section_break_hgbl",
+  "addons",
+  "section_break_pvwk",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Type",
+   "options": "Service Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xopg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_selection_section",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Selection"
+  },
+  {
+   "fieldname": "vehicle_class",
+   "fieldtype": "Link",
+   "label": "Vehicle Class",
+   "options": "Vehicle Class"
+  },
+  {
+   "fieldname": "column_break_ukzw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle"
+  },
+  {
+   "fieldname": "column_break_bhok",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Driver"
+  },
+  {
+   "fieldname": "pricing_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing Summary"
+  },
+  {
+   "fieldname": "rate_card",
+   "fieldtype": "Link",
+   "label": "Rate Card",
+   "options": "Service Rate Card"
+  },
+  {
+   "fetch_from": "rate_card.rate",
+   "fieldname": "base_amount",
+   "fieldtype": "Currency",
+   "label": "Base Amount"
+  },
+  {
+   "fieldname": "add_ons_amount",
+   "fieldtype": "Currency",
+   "label": "Add Ons Amount"
+  },
+  {
+   "fieldname": "column_break_uxbq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Service Booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "booking_status",
+   "fieldtype": "Select",
+   "label": "Booking Status",
+   "options": "Draft\nConfirmed\nCompleted\nCancelled",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "round_trip",
+   "fieldtype": "Check",
+   "label": "Round Trip"
+  },
+  {
+   "fieldname": "section_break_pvwk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_kkiw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "airport_transfer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Airport Transfer Details"
+  },
+  {
+   "fieldname": "airport_transfer",
+   "fieldtype": "Table",
+   "label": "Airport Transfer",
+   "options": "Airport Transfer Detail"
+  },
+  {
+   "fieldname": "event_transport_details_section",
+   "fieldtype": "Section Break",
+   "label": "Event Transport Details"
+  },
+  {
+   "fieldname": "event_transport",
+   "fieldtype": "Table",
+   "label": "Event Transport",
+   "options": "Event Transport Detail"
+  },
+  {
+   "fieldname": "rental_details",
+   "fieldtype": "Table",
+   "label": "Rental Details",
+   "options": "Transport Rental Detail"
+  },
+  {
+   "fieldname": "rental_details_section",
+   "fieldtype": "Section Break",
+   "label": "Rental Details"
+  },
+  {
+   "fieldname": "section_break_hgbl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "addons",
+   "fieldtype": "Table",
+   "label": "Addons",
+   "options": "Service Rate Addon"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "paid",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Paid"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-02-04 19:21:45.132695",
+ "modified_by": "Administrator",
+ "module": "Service Booking",
+ "name": "Service Booking",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

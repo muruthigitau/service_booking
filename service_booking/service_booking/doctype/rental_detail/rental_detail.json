@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-03 21:28:26.282933",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "start_date",
+  "column_break_zgxo",
+  "end_date",
+  "locations_section",
+  "pickup_location",
+  "column_break_rngf",
+  "return_location",
+  "charges_section",
+  "daily_rate",
+  "column_break_aqcv",
+  "bond_amount",
+  "bond_method",
+  "verification_section",
+  "driver_license_upload",
+  "column_break_mxuu",
+  "id_upload"
+ ],
+ "fields": [
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zgxo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "locations_section",
+   "fieldtype": "Section Break",
+   "label": "Locations"
+  },
+  {
+   "fieldname": "pickup_location",
+   "fieldtype": "Small Text",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Pickup Location"
+  },
+  {
+   "fieldname": "column_break_rngf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "return_location",
+   "fieldtype": "Small Text",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Return Location"
+  },
+  {
+   "fieldname": "charges_section",
+   "fieldtype": "Section Break",
+   "label": "Charges"
+  },
+  {
+   "fieldname": "daily_rate",
+   "fieldtype": "Currency",
+   "label": "Daily Rate"
+  },
+  {
+   "fieldname": "column_break_aqcv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bond_amount",
+   "fieldtype": "Currency",
+   "label": "Bond Amount"
+  },
+  {
+   "fieldname": "bond_method",
+   "fieldtype": "Select",
+   "label": "Bond Method",
+   "options": "Cash\nCredit"
+  },
+  {
+   "fieldname": "verification_section",
+   "fieldtype": "Section Break",
+   "label": "Verification"
+  },
+  {
+   "fieldname": "driver_license_upload",
+   "fieldtype": "Attach",
+   "label": "Driver License Upload"
+  },
+  {
+   "fieldname": "column_break_mxuu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "id_upload",
+   "fieldtype": "Attach",
+   "label": "ID Upload"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-02-03 21:35:43.523048",
+ "modified_by": "Administrator",
+ "module": "Service Booking",
+ "name": "Rental Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-03 21:00:22.482508",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "airport",
+  "pickup_date",
+  "pickup_time",
+  "round_trip",
+  "column_break_mzjx",
+  "flight_number",
+  "address",
+  "travel_details_section",
+  "passenger_count",
+  "column_break_knoc",
+  "luggage_count",
+  "return_trip_section",
+  "return_date",
+  "column_break_zbhw",
+  "return_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pickup_date",
+   "fieldtype": "Date",
+   "label": "Pickup Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pickup_time",
+   "fieldtype": "Time",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Pickup Time"
+  },
+  {
+   "fieldname": "column_break_mzjx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "flight_number",
+   "fieldtype": "Data",
+   "label": "Flight Number"
+  },
+  {
+   "fieldname": "travel_details_section",
+   "fieldtype": "Section Break",
+   "label": "Travel Details"
+  },
+  {
+   "fieldname": "passenger_count",
+   "fieldtype": "Int",
+   "label": "Passenger Count"
+  },
+  {
+   "fieldname": "column_break_knoc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "luggage_count",
+   "fieldtype": "Int",
+   "label": "Luggage Count"
+  },
+  {
+   "depends_on": "eval: doc.round_trip",
+   "fieldname": "return_trip_section",
+   "fieldtype": "Section Break",
+   "label": "Return Trip"
+  },
+  {
+   "fieldname": "return_date",
+   "fieldtype": "Date",
+   "label": "Return Date"
+  },
+  {
+   "fieldname": "column_break_zbhw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "return_time",
+   "fieldtype": "Time",
+   "label": "Return Time"
+  },
+  {
+   "default": "0",
+   "fieldname": "round_trip",
+   "fieldtype": "Check",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Round Trip"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-02-03 21:25:49.626653",
+ "modified_by": "Administrator",
+ "module": "Service Booking",
+ "name": "Airport Transfer Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
