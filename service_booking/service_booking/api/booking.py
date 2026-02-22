@@ -420,3 +420,12 @@ def record_payment(
 
 def get_controller(payment_gateway):
     return get_payment_gateway_controller(payment_gateway)
+
+
+@frappe.whitelist(allow_guest=True)
+def get_payment_methods():
+    """Return list of enabled payment gateways."""
+    settings = frappe.get_doc("Service Booking Settings")
+    gateways = settings.payment_gateways or []
+    enabled_gateways = [g.gateway for g in gateways if g.enabled]
+    return enabled_gateways

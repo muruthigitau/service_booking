@@ -5,7 +5,9 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "website_link"
+  "website_link",
+  "payments_section",
+  "payment_gateways"
  ],
  "fields": [
   {
@@ -13,13 +15,24 @@
    "fieldtype": "Data",
    "label": "Website Link",
    "options": "URL"
+  },
+  {
+   "fieldname": "payments_section",
+   "fieldtype": "Section Break",
+   "label": "Payments"
+  },
+  {
+   "fieldname": "payment_gateways",
+   "fieldtype": "Table",
+   "label": "Payment Gateways",
+   "options": "Payment Gateway Item"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2026-02-23 02:44:26.796300",
+ "modified": "2026-02-23 03:16:02.136533",
  "modified_by": "Administrator",
  "module": "Service Booking",
  "name": "Service Booking Settings",
