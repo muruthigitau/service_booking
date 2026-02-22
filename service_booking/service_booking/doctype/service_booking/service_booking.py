@@ -14,4 +14,17 @@ class ServiceBooking(Document):
             frappe.throw("Service Type is missing service code.")
 
         random_digits = random.randint(0, 999)
-        self.name = frappe.model.naming.make_autoname(f"SB-{service}-.YY.-.{random_digits:04d}.#")
+        self.name = frappe.model.naming.make_autoname(
+            f"SB-{service}-.YY.-.{random_digits:04d}.#"
+        )
+
+    @frappe.whitelist()
+    def update_payments(self):
+        payments = frappe.get_all(
+            "Service Booking Payment",
+            filters={"service_booking": self.name, "paid": 1},
+            fields=["amount"],
+        )
+        total_paid = sum(payment.amount for payment in payments)
+        self.total_paid = total_paid
+        self.save(ignore_permissions=True)
