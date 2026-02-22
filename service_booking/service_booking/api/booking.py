@@ -234,6 +234,7 @@ def create_booking():
         booking_doc.add_ons_amount = add_ons_total
         booking_doc.total_amount = float(data.get("totalAmount") or 0)
         booking_doc.set("addons", addons_table)
+        booking_doc.paid = 0
 
         # -------------------
         # Dynamic Child Table
