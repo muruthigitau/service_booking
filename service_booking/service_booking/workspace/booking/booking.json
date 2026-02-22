@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"P5hxyS3lIX\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Service Booking</span>\",\"col\":12}},{\"id\":\"epAoLWImVs\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"DBkEfF8QDC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Service Booking\",\"col\":4}},{\"id\":\"BLuXAN8MSY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Service Type\",\"col\":4}},{\"id\":\"MtG5bVLLEv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Service Rate Card\",\"col\":4}},{\"id\":\"i-J3-ChcYC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Class\",\"col\":4}},{\"id\":\"QOXOTaeaX3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"City\",\"col\":4}},{\"id\":\"2MkSk0u60u\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airport\",\"col\":4}},{\"id\":\"oDUszFWMbd\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"GxMps2ko2d\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Service Booking\",\"col\":4}},{\"id\":\"wPa8nyuo5A\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Payments\",\"col\":4}}]",
+ "content": "[{\"id\":\"P5hxyS3lIX\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Service Booking</span>\",\"col\":12}},{\"id\":\"epAoLWImVs\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"q8xeF8FvDH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Settings\",\"col\":4}},{\"id\":\"DBkEfF8QDC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Service Booking\",\"col\":4}},{\"id\":\"BLuXAN8MSY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Service Type\",\"col\":4}},{\"id\":\"MtG5bVLLEv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Service Rate Card\",\"col\":4}},{\"id\":\"QOXOTaeaX3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"City\",\"col\":4}},{\"id\":\"2MkSk0u60u\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airport\",\"col\":4}},{\"id\":\"oDUszFWMbd\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"GxMps2ko2d\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Service Booking\",\"col\":4}},{\"id\":\"wPa8nyuo5A\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Payments\",\"col\":4}}]",
  "creation": "2026-02-03 21:53:22.702456",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Booking",
  "links": [],
- "modified": "2026-02-23 02:45:57.548110",
+ "modified": "2026-02-23 03:19:48.174044",
  "modified_by": "Administrator",
  "module": "Service Booking",
  "name": "Booking",
@@ -39,16 +39,15 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Service Booking",
-   "link_to": "Service Booking",
-   "stats_filter": "[]",
+   "label": "Settings",
+   "link_to": "Service Booking Settings",
    "type": "DocType"
   },
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Vehicle Class",
-   "link_to": "Vehicle Class",
+   "label": "Service Booking",
+   "link_to": "Service Booking",
    "stats_filter": "[]",
    "type": "DocType"
   },
