@@ -330,6 +330,9 @@ def generate_payment_link(booking_id, payment_gateway="PayPal", redirect_to="/")
     try:
         booking_doc = frappe.get_doc("Service Booking", booking_id)
         booking_doc.flags.ignore_permissions = True
+        customer_email = frappe.get_cached_value(
+            "Customer", booking_doc.customer, "email_id"
+        )
 
         link = get_payment_link(
             booking_id,
@@ -337,6 +340,7 @@ def generate_payment_link(booking_id, payment_gateway="PayPal", redirect_to="/")
             booking_doc.currency,
             payment_gateway,
             redirect_to=redirect_to,
+            email=customer_email,
             title=f"Payment for Service Booking {booking_id}",
         )
 
@@ -356,6 +360,7 @@ def get_payment_link(
     currency: str,
     payment_gateway: str,
     redirect_to: str = "/",
+    email: str | None = None,
     title: str | None = None,
 ) -> str:
     payment = record_payment(reference_docname, amount, currency, payment_gateway)
@@ -368,7 +373,7 @@ def get_payment_link(
         "description": f"{user_full_name}'s payment for Service Booking (#{reference_docname})",
         "reference_doctype": "Service Booking",
         "reference_docname": reference_docname,
-        "payer_email": frappe.session.user,
+        "payer_email": email or frappe.session.user,
         "payer_name": user_full_name,
         "currency": currency,
         "payment_gateway": payment_gateway,
