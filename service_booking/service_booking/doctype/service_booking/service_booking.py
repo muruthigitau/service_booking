@@ -26,5 +26,6 @@ class ServiceBooking(Document):
             fields=["amount"],
         )
         total_paid = sum(payment.amount for payment in payments)
-        self.total_paid = total_paid
+        if total_paid >= self.total_amount:
+            self.paid = 1
         self.save(ignore_permissions=True)
