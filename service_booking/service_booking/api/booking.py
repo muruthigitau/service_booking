@@ -327,18 +327,27 @@ def submit_booking(name):
 
 @frappe.whitelist(allow_guest=True)
 def generate_payment_link(booking_id, payment_gateway="PayPal", redirect_to="/"):
-    booking_doc = frappe.get_doc("Service Booking", booking_id)
+    try:
+        booking_doc = frappe.get_doc("Service Booking", booking_id)
+        booking_doc.flags.ignore_permissions = True
 
-    link = get_payment_link(
-        booking_id,
-        booking_doc.total_amount,
-        booking_doc.currency,
-        payment_gateway,
-        redirect_to=redirect_to,
-        title=f"Payment for Service Booking {booking_id}",
-    )
+        link = get_payment_link(
+            booking_id,
+            booking_doc.total_amount,
+            booking_doc.currency,
+            payment_gateway,
+            redirect_to=redirect_to,
+            title=f"Payment for Service Booking {booking_id}",
+        )
 
-    return {"payment_url": link}
+        return {"payment_url": link}
+
+    except frappe.DoesNotExistError:
+        frappe.throw(_("Service Booking not found"))
+
+    except Exception as e:
+        frappe.log_error(traceback.format_exc(), "Generate Payment Link Error")
+        return {"status": "error", "message": str(e)}
 
 
 def get_payment_link(
@@ -382,6 +391,7 @@ def record_payment(
     payment_gateway: str | None = None,
 ):
     payment_doc = frappe.new_doc("Service Booking Payment")
+    payment_doc.flags.ignore_permissions = True
     payment_doc.update(
         {
             "amount": amount,
