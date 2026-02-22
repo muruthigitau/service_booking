@@ -8,6 +8,7 @@
  "field_order": [
   "start_date",
   "start_time",
+  "passenger_count",
   "column_break_umfm",
   "end_date",
   "end_time",
@@ -19,11 +20,6 @@
   "id_upload",
   "column_break_aayi",
   "driver_licence_upload",
-  "section_break_vykd",
-  "column_break_weut",
-  "passenger_count",
-  "column_break_gmpy",
-  "vehicle_category",
   "section_break_huio",
   "payment_method",
   "column_break_gcmp",
@@ -62,8 +58,7 @@
   },
   {
    "fieldname": "locations_section",
-   "fieldtype": "Section Break",
-   "label": "Locations"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "pickup_location",
@@ -94,25 +89,6 @@
    "in_list_view": 1,
    "label": "End Date",
    "reqd": 1
-  },
-  {
-   "fieldname": "section_break_vykd",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_weut",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "vehicle_category",
-   "fieldtype": "Link",
-   "label": "Vehicle Category",
-   "options": "Vehicle Class",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_gmpy",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "section_break_huio",
@@ -161,7 +137,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-02-04 18:13:25.162734",
+ "modified": "2026-02-22 22:21:57.992243",
  "modified_by": "Administrator",
  "module": "Service Booking",
  "name": "Event Transport Detail",
