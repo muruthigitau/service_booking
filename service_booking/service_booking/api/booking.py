@@ -338,12 +338,14 @@ def generate_payment_link(booking_id, payment_gateway="PayPal", redirect_to="/")
             "Customer", booking_doc.customer, "customer_name"
         )
 
+        route = booking_doc.route
+
         link = get_payment_link(
             booking_id,
             booking_doc.total_amount,
             booking_doc.currency,
             payment_gateway,
-            redirect_to=redirect_to,
+            redirect_to=route or redirect_to,
             email=customer_email,
             name=customer_name,
             title=f"Payment for Service Booking {booking_id}",
