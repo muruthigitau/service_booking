@@ -218,8 +218,14 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2026-02-22 23:26:45.160577",
+ "links": [
+  {
+   "group": "Payments",
+   "link_doctype": "Service Booking Payment",
+   "link_fieldname": "service_booking"
+  }
+ ],
+ "modified": "2026-02-23 02:18:39.291393",
  "modified_by": "Administrator",
  "module": "Service Booking",
  "name": "Service Booking",

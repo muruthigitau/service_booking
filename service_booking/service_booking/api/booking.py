@@ -377,8 +377,8 @@ def get_payment_link(
         "amount": amount,
         "title": title or f"Payment for Service Booking: {reference_docname}",
         "description": f"{name or user_full_name}'s payment for Service Booking (#{reference_docname})",
-        "reference_doctype": "Service Booking",
-        "reference_docname": reference_docname,
+        "reference_doctype": "Service Booking Payment",
+        "reference_docname": payment.name,
         "payer_email": email or frappe.session.user,
         "payer_name": name or user_full_name,
         "currency": currency,
@@ -411,7 +411,8 @@ def record_payment(
             "payment_gateway": payment_gateway,
         }
     )
-    payment_doc.save(ignore_permissions=True)
+    payment_doc.insert(ignore_permissions=True)
+    frappe.db.commit()
     return payment_doc
 
 
