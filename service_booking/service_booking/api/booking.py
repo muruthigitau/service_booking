@@ -227,12 +227,12 @@ def create_booking():
         # Update Core Fields
         booking_doc.date = data.get("date") or nowdate()
         booking_doc.rate_card = rate
+        booking_doc.currency = rate_card.currency if rate_card else "AUD"
         booking_doc.vehicle_class = data.get("vehicleClass") or None
         booking_doc.airport = data.get("airport") or None
         booking_doc.base_amount = float(data.get("baseAmount") or 0)
         booking_doc.add_ons_amount = add_ons_total
         booking_doc.total_amount = float(data.get("totalAmount") or 0)
-        booking_doc.currency = data.get("currency") or "KES"
         booking_doc.set("addons", addons_table)
 
         # -------------------
@@ -394,6 +394,9 @@ def get_payment_link(
 
     url = controller.get_payment_url(**payment_details)
 
+    if "currency=" not in url:
+        separator = "&" if "?" in url else "?"
+        url = f"{url}{separator}currency={currency}"
     return url
 
 
