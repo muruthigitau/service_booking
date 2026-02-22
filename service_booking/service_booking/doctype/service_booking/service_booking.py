@@ -18,6 +18,12 @@ class ServiceBooking(Document):
             f"SB-{service}-.YY.-.{random_digits:04d}.#"
         )
 
+    def validate(self):
+        if not self.route:
+            settings = frappe.get_doc("Service Booking Settings")
+            web_url = settings.website_link or ""
+            self.route = f"{web_url}/book/{self.name}"
+
     @frappe.whitelist()
     def update_payments(self):
         payments = frappe.get_all(

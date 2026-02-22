@@ -6,6 +6,9 @@ from frappe.model.document import Document
 
 
 class ServiceBookingPayment(Document):
+    def autoname(self):
+        self.name = frappe.model.naming.make_autoname(f"{self.service_booking}-.##")
+
     def on_payment_authorized(self, payment_status: str):
         if payment_status in ("Authorized", "Completed"):
             self.paid = 1

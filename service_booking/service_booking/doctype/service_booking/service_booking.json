@@ -35,7 +35,8 @@
   "section_break_hgbl",
   "addons",
   "section_break_pvwk",
-  "amended_from"
+  "amended_from",
+  "route"
  ],
  "fields": [
   {
@@ -213,10 +214,18 @@
    "fieldtype": "Link",
    "label": "Rate Card",
    "options": "Service Rate Card"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "no_copy": 1,
+   "options": "URL",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
- "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [
   {
@@ -225,7 +234,7 @@
    "link_fieldname": "service_booking"
   }
  ],
- "modified": "2026-02-23 02:18:39.291393",
+ "modified": "2026-02-23 02:54:26.011479",
  "modified_by": "Administrator",
  "module": "Service Booking",
  "name": "Service Booking",
