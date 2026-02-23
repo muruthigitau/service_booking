@@ -25,6 +25,13 @@ class ServiceBooking(Document):
             self.route = f"{web_url}/book/{self.name}"
         self.save(ignore_permissions=True)
 
+    def validate(self):
+        settings = frappe.get_doc("Service Booking Settings")
+        web_url = settings.website_link or ""
+        route = f"{web_url}/book/{self.name}"
+        if self.route != route:
+            self.route = route
+
     @frappe.whitelist()
     def update_payments(self):
         payments = frappe.get_all(
