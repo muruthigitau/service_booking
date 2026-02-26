@@ -1,151 +1,151 @@
 {
- "actions": [],
- "allow_rename": 1,
- "creation": "2026-02-04 18:14:45.672488",
- "doctype": "DocType",
- "editable_grid": 1,
- "engine": "InnoDB",
- "field_order": [
-  "start_date",
-  "start_time",
-  "passenger_count",
-  "column_break_umfm",
-  "end_date",
-  "end_time",
-  "locations_section",
-  "pickup_location",
-  "column_break_sxdz",
-  "final_destination",
-  "section_break_jyhq",
-  "id_upload",
-  "column_break_aayi",
-  "driver_licence_upload",
-  "section_break_huio",
-  "payment_method",
-  "column_break_gcmp",
-  "bond_method"
- ],
- "fields": [
-  {
-   "fieldname": "start_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Start Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "start_time",
-   "fieldtype": "Time",
-   "in_list_view": 1,
-   "label": "Start Time",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_umfm",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "end_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "End Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "end_time",
-   "fieldtype": "Time",
-   "in_list_view": 1,
-   "in_preview": 1,
-   "in_standard_filter": 1,
-   "label": "End Time",
-   "reqd": 1
-  },
-  {
-   "fieldname": "locations_section",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "pickup_location",
-   "fieldtype": "Small Text",
-   "label": "Pickup Location",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_sxdz",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "final_destination",
-   "fieldtype": "Small Text",
-   "label": "Final Destination",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_break_jyhq",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "id_upload",
-   "fieldtype": "Attach",
-   "label": "ID Upload",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_aayi",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "driver_licence_upload",
-   "fieldtype": "Attach",
-   "label": "Driver Licence Upload",
-   "reqd": 1
-  },
-  {
-   "fieldname": "passenger_count",
-   "fieldtype": "Int",
-   "in_filter": 1,
-   "in_list_view": 1,
-   "in_preview": 1,
-   "in_standard_filter": 1,
-   "label": "Passenger Count",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_break_huio",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "payment_method",
-   "fieldtype": "Select",
-   "label": "Payment Method",
-   "options": "Cash\nCredit",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_gcmp",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "bond_method",
-   "fieldtype": "Select",
-   "label": "Bond Method",
-   "options": "Cash\nCredit",
-   "reqd": 1
-  }
- ],
- "grid_page_length": 50,
- "index_web_pages_for_search": 1,
- "istable": 1,
- "links": [],
- "modified": "2026-02-22 22:17:46.025911",
- "modified_by": "Administrator",
- "module": "Service Booking",
- "name": "Transport Rental Detail",
- "owner": "Administrator",
- "permissions": [],
- "row_format": "Dynamic",
- "rows_threshold_for_grid_search": 20,
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": []
+  "actions": [],
+  "allow_rename": 1,
+  "creation": "2026-02-04 18:14:45.672488",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "start_date",
+    "start_time",
+    "passenger_count",
+    "column_break_umfm",
+    "end_date",
+    "end_time",
+    "locations_section",
+    "pickup_location",
+    "column_break_sxdz",
+    "final_destination",
+    "section_break_jyhq",
+    "id_upload",
+    "column_break_aayi",
+    "driver_licence_upload",
+    "section_break_huio",
+    "payment_method",
+    "column_break_gcmp",
+    "bond_method"
+  ],
+  "fields": [
+    {
+      "fieldname": "start_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Start Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "start_time",
+      "fieldtype": "Time",
+      "in_list_view": 1,
+      "label": "Start Time",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_umfm",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "end_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "End Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "end_time",
+      "fieldtype": "Time",
+      "in_list_view": 1,
+      "in_preview": 1,
+      "in_standard_filter": 1,
+      "label": "End Time",
+      "reqd": 1
+    },
+    {
+      "fieldname": "locations_section",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "pickup_location",
+      "fieldtype": "Small Text",
+      "label": "Pickup Location",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_sxdz",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "final_destination",
+      "fieldtype": "Small Text",
+      "label": "Final Destination",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_break_jyhq",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "id_upload",
+      "fieldtype": "Attach",
+      "label": "ID Upload",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_aayi",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "driver_licence_upload",
+      "fieldtype": "Attach",
+      "label": "Driver Licence Upload",
+      "reqd": 0
+    },
+    {
+      "fieldname": "passenger_count",
+      "fieldtype": "Int",
+      "in_filter": 1,
+      "in_list_view": 1,
+      "in_preview": 1,
+      "in_standard_filter": 1,
+      "label": "Passenger Count",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_break_huio",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "payment_method",
+      "fieldtype": "Select",
+      "label": "Payment Method",
+      "options": "Cash\nCredit",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_gcmp",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "bond_method",
+      "fieldtype": "Select",
+      "label": "Bond Method",
+      "options": "Cash\nCredit",
+      "reqd": 1
+    }
+  ],
+  "grid_page_length": 50,
+  "index_web_pages_for_search": 1,
+  "istable": 1,
+  "links": [],
+  "modified": "2026-02-22 22:17:46.025911",
+  "modified_by": "Administrator",
+  "module": "Service Booking",
+  "name": "Transport Rental Detail",
+  "owner": "Administrator",
+  "permissions": [],
+  "row_format": "Dynamic",
+  "rows_threshold_for_grid_search": 20,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": []
 }
